@@ -44,6 +44,40 @@ void Display::print_row(int location[3], String text[], int row)
   }
 }
 
+void Display::print_multi_row(int location[2][3], String text[2][3])
+{
+  //clear();
+  for(int row = 0 ; row < 1 ; row++ )
+  {
+    for(int col = 0 ; col < 2 ; col++)
+    {
+      setCursor(location[row][col], row);
+      print(text[row][col]);
+    }
+  }
+}
 
+int Display::main_menu(void)
+{
+  //int loc[] = {0,7,15};
+  int loc[2][3] = {{0,7,15}, {0,0,15}};
+  //String screen1[2][3] = {{"Time", "Alarm", ">"},{"","",">"}};
+  //String screen2[2][3] = {{"Enable", "Exit", ">"},{"","",">"}};
+  String screen[2][2][3] = {
+    {
+      {"Time", "Alarm", ">"},
+      {"","",">"}
+    },
+    {
+      {"Enable", "Exit", ">"},
+      {"","",">"}
+    }
+  };
+
+  for(int menu_screen = 0 ; menu_screen < 1 ; menu_screen++ )
+  {
+    print_multi_row(loc, screen[menu_screen]);
+  }
+}
 
 

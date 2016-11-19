@@ -17,14 +17,15 @@ void setup()
 void loop() 
 {
 
-    //int loc[] = {0,7,15};
-    int loc[2][3] = {{0,7,15}, {0,0,15}};
-    String myString[2][3] = {{"Time", "Alarm", ">"},{"","",">"}};
+  //int loc[] = {0,7,15};
+  int loc[2][3] = {{0,7,15}, {0,0,15}};
+  String myString[2][3] = {{"Time", "Alarm", ">"},{"","",">"}};
 
-    lcd.clear();
-    for (int row = 0; row < 2 ; row++ )
-    {
-      lcd.print_row(loc[row], myString[row], row);
-    }
+  lcd.clear();
+  for (int row = 0; row < 2 ; row++ )
+  {
+    lcd.print_row(loc[row], myString[row], row);
+  }
+
     
 }

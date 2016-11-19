@@ -29,6 +29,8 @@ class Display : public LiquidCrystal_I2C {
       void new_method(void);
       void printMain(void);
       void print_row(int location[3], String text[], int row);
+      void print_multi_row(int location[2][3], String text[2][3]);
+      int main_menu(void);
 
 
 };
